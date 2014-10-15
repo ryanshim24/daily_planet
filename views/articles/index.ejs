@@ -14,8 +14,8 @@
 
 
 <body>
-  <% if(allMyArticles.length == 0) { %> 
-     <div class="navbar navbar-inverse navbar-top" role="navigation">
+  <% if(allMyArticles.length == 0) { %> <!-- if the array length is less than zero I know I have no articles -->
+     <div class="navbar navbar-inverse navbar-top" role="navigation"> <!-- My Awesome nav bar -->
         <div class="container">
           <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -75,8 +75,8 @@
       </div>
 
 
-      <% allMyArticles.forEach(function(article){ %>
-
+      <% allMyArticles.forEach(function(article){ %> <!-- Goes through my articles array -->
+<!-- For each article It prints out the article counter and the content of the article I wrote -->
       <span><a href="/articles/<%=article.id%>">Article: <%= article.id %></a></span>
       <br>
       <article><%= article.articlename %></article>

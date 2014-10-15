@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Adding articles</title>
+  <title>Adding Articles Page</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -40,6 +40,7 @@
     <div class="container">
       <form action="/articles" method="POST">
           <h3>New Articles:</h3>
+          <!-- I'm calling name article[articlename] for me to call it back in my app file -->
           <textarea rows="10" cols="75" type="text" name="article[articlename]" id="articlename"></textarea>
           <br>
           <br>

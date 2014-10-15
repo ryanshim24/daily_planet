@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     
-    <title>Specific Articles</title>
+    <title>Specific Articles Page</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -19,7 +19,8 @@
   </head>
 
 <body>
-  <% if(typeof article === 'undefined') { %> 
+  <% if(typeof article === 'undefined') { %> <!-- If article is not defined -->
+  <!-- That means there wasn't the article id we were looking for -->
     <div class="navbar navbar-inverse navbar-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -74,8 +75,8 @@
         <h1>Specific Article</h1>
         <p class="lead">Read these arcticle to get your mind blown away.</p>
       </div>
-
-      <h3>Article: <%= article.id %></h3>
+      <!-- I can call the specific article that I'm in thus I can put specific content in here-->
+      <h3>Article: <%= article.id %></h3> 
       <article><%= article.articlename %></article>
       <br>
        <a class="btn btn-primary btn-sm pull-right" role="button" href="/articles">Go Back »</a>
