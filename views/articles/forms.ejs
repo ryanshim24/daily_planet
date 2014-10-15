@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adding articles</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+</head>
+<body>
+
+  <div class="navbar navbar-inverse navbar-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="/">Daily Planet</a>
+          </div>
+          <div class="navbar-collapse collapse" style="height: 1px;">
+            <ul class = "nav navbar-nav navbar-right">
+              <li><a href="/">Home</a></li>
+              <li class="active"><a href="/articles">Articles</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+            </ul>
+         </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <form action="/articles" method="POST">
+          <h3>New Articles:</h3>
+          <textarea rows="10" cols="75" type="text" name="article[articlename]" id="articlename"></textarea>
+          <br>
+          <br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </p>
+      </form>
+    </div>
+
+
+</body>
+</html>

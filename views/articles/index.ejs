@@ -1,0 +1,99 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Articles Page</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+</head>
+
+
+<body>
+  <% if(allMyArticles.length == 0) { %> 
+     <div class="navbar navbar-inverse navbar-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="/">Daily Planet</a>
+          </div>
+          <div class="navbar-collapse collapse" style="height: 1px;">
+            <ul class = "nav navbar-nav navbar-right">
+              <li><a href="/">Home</a></li>
+              <li class="active"><a href="/articles">Articles</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+            </ul>
+         </div>
+        </div>
+    </div>
+    <div class="container">
+      <h2>Sorry, there are no Articles in the current directory.</h2>
+      <p class="lead">Would you like to add an Article?</p>
+      <a class="btn btn-primary btn-lg" role="button" href="/articles/new">Create New »</a>
+    </div>
+
+  <% } else { %>
+
+  <div class="navbar navbar-inverse navbar-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="/">Daily Planet</a>
+          </div>
+          <div class="navbar-collapse collapse" style="height: 1px;">
+            <ul class = "nav navbar-nav navbar-right">
+              <li><a href="/">Home</a></li>
+              <li class="active"><a href="/articles">Articles</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+            </ul>
+         </div>
+        </div>
+    </div>
+
+    <div class="container newArt">
+
+      <div class="starter-template">
+        <h1>Articles</h1>
+        <p class="lead">Read these arcticles to get your mind blown away.</p>
+        <hr>
+      </div>
+
+
+      <% allMyArticles.forEach(function(article){ %>
+
+      <span><a href="/articles/<%=article.id%>">Article: <%= article.id %></a></span>
+      <br>
+      <article><%= article.articlename %></article>
+      <br>
+  <% }); %>
+  <a class="btn btn-primary btn-sm pull-right" role="button" href="/articles/new">Create New »</a>
+
+ <% } %>
+
+    </div>
+    <br>
+
+    <footer>
+        <p>© Ryan's Awesome 2014</p>
+      </footer>
+  
+
+  
+
+</body></html>
